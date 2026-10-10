@@ -1,253 +1,39 @@
-# 🥖 WIB Bakery - Aplikasi Pemesanan Roti & Kue Online
+# 🥖 WIB Bakery - Aplikasi Flutter Pemesanan Roti & Kue
 
-![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)
-![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+**Proyek Akhir Pemrograman Mobile - Kelompok 1**
 
-Aplikasi mobile cross-platform untuk sistem pemesanan roti dan kue online. Dibangun menggunakan **Flutter** dengan fitur lengkap untuk customer dan admin.
+Aplikasi mobile untuk pesan roti dan kue online dengan fitur customer dan admin dashboard.
 
 ---
 
-## 📋 Daftar Isi
+## 🚀 QUICK START (5 Menit Jalan)
 
-- [Tentang Proyek](#tentang-proyek)
-- [Fitur Utama](#fitur-utama)
-- [Tech Stack](#tech-stack)
-- [Struktur Project](#struktur-project)
-- [Instalasi & Setup](#instalasi--setup)
-- [Cara Penggunaan](#cara-penggunaan)
-- [Demo Account](#demo-account)
-- [Dokumentasi Fitur](#dokumentasi-fitur)
-- [Tim Pengembang](#tim-pengembang)
+### 1️⃣ Install & Run
+```bash
+# Clone project
+git clone https://github.com/Pendragon-Ancestor/WIBakeryPendragonAncestorPertemuan4.git
+cd wib_bakery
 
----
+# Install dependencies
+flutter pub get
 
-## 🎯 Tentang Proyek
-
-**WIB Bakery** adalah proyek akhir mata kuliah **Pemrograman Mobile** yang mengimplementasikan aplikasi pemesanan roti dan kue secara online. Aplikasi ini dirancang untuk memudahkan customer dalam membeli produk bakery dan membantu admin dalam mengelola katalog produk, promo, dan pesanan.
-
-**Fitur utama:**
-- Katalog produk dengan kategori
-- Sistem keranjang belanja
-- Proses checkout dan pembayaran
-- Tracking status pesanan
-- Admin dashboard untuk manajemen produk dan promo
-- Sistem autentikasi (login/register)
-
----
-
-## ✨ Fitur Utama
-
-### 👤 Untuk Customer
-
-| Fitur | Deskripsi |
-|-------|-----------|
-| **Authentication** | Login dan Register dengan validasi email & password |
-| **Browse Products** | Lihat katalog produk berdasarkan kategori (Roti, Kue, Minuman) |
-| **Product Detail** | Lihat deskripsi, harga, dan rating produk |
-| **Shopping Cart** | Tambah/hapus produk ke keranjang belanja |
-| **Checkout** | Proses pembelian dengan pilihan alamat pengiriman |
-| **Order Tracking** | Lihat status pesanan real-time (Pending, Processing, Shipped, Delivered) |
-| **Order History** | Riwayat semua pesanan customer |
-| **Promo & Deals** | Lihat dan gunakan kode promo tersedia |
-
-### 🛠️ Untuk Admin
-
-| Fitur | Deskripsi |
-|-------|-----------|
-| **Admin Dashboard** | Statistik penjualan, total order, dan revenue |
-| **Product Management** | CRUD produk (Create, Read, Update, Delete) |
-| **Category Management** | Kelola kategori produk |
-| **Order Management** | Lihat dan update status pesanan |
-| **Promo Management** | Buat dan kelola kode promo |
-| **Sales Analytics** | Laporan penjualan dan performa |
-
----
-
-## 🛠️ Tech Stack
-
-```
-Frontend:
-├── Flutter 3.0+
-├── Dart 3.0+
-├── Provider (State Management)
-├── Cached Network Image
-├── Flutter SVG
-├── Carousel Slider
-└── Shimmer
-
-Backend/Database:
-├── SQLite (Local Database)
-└── Local Storage (Shared Preferences)
-
-Design & UI:
-├── Material Design 3
-├── Custom Widgets
-└── Responsive Layout
+# Run di emulator / device
+flutter run
 ```
 
----
-
-## 📁 Struktur Project
-
-```
-wib_bakery/
-├── lib/
-│   ├── main.dart                           # Entry point aplikasi
-│   ├── app/
-│   │   └── router.dart                     # Navigation routing
-│   ├── core/
-│   │   ├── database/
-│   │   │   └── database_helper.dart        # SQLite database helper
-│   │   ├── models/
-│   │   │   ├── user_model.dart
-│   │   │   ├── product_model.dart
-│   │   │   ├── category_model.dart
-│   │   │   ├── cart_model.dart
-│   │   │   ├── order_model.dart
-│   │   │   ├── promo_model.dart
-│   │   │   └── address_model.dart
-│   │   ├── theme/
-│   │   │   ├── app_colors.dart             # Color palette
-│   │   │   └── app_theme.dart              # Theme configuration
-│   │   └── widgets/
-│   │       └── bakery_image.dart           # Reusable image widget
-│   ├── features/
-│   │   ├── auth/                           # Authentication feature
-│   │   │   ├── providers/
-│   │   │   ├── repositories/
-│   │   │   └── screens/
-│   │   ├── home/                           # Home/Dashboard feature
-│   │   ├── products/                       # Product catalog
-│   │   │   ├── providers/
-│   │   │   ├── repositories/
-│   │   │   ├── screens/
-│   │   │   └── widgets/
-│   │   ├── cart/                           # Shopping cart
-│   │   ├── orders/                         # Order management
-│   │   ├── promo/                          # Promo system
-│   │   └── admin/                          # Admin dashboard
-│   │       ├── screens/
-│   │       └── widgets/
-│   └── assets/
-│       ├── images/                         # Product images
-│       └── icons/                          # App icons
-├── android/                                # Android native code
-├── pubspec.yaml                            # Dependencies
-├── pubspec.lock                            # Dependency versions
-└── README.md                               # Documentation
-```
+**Selesai! Aplikasi akan terbuka dalam 1-2 menit** ✅
 
 ---
 
-## 🚀 Instalasi & Setup
+## 📱 Akun Demo (Copy-Paste Langsung)
 
-### Prasyarat
-- Flutter SDK 3.0 atau lebih tinggi
-- Dart SDK 3.0 atau lebih tinggi
-- Android Studio atau VS Code
-- Android Emulator atau device fisik
-
-### Langkah-Langkah Instalasi
-
-1. **Clone Repository**
-   ```bash
-   git clone https://github.com/reiquasar/WIBakery.git
-   cd wib_bakery
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run Aplikasi**
-   ```bash
-   # Di emulator/device
-   flutter run
-   
-   # Build APK
-   flutter build apk --release
-   ```
-
-4. **Build Release APK**
-   ```bash
-   flutter build apk --release
-   # Output: build/app/outputs/flutter-apk/app-release.apk
-   ```
-
----
-
-## 📱 Cara Penggunaan
-
-### Untuk Customer
-
-1. **Register Akun**
-   - Buka aplikasi → Klik "Register"
-   - Isi email, nama, dan password
-   - Klik "Create Account"
-
-2. **Login**
-   - Masukkan email dan password
-   - Klik "Login"
-
-3. **Browse Produk**
-   - Lihat katalog produk di homepage
-   - Pilih kategori (Roti, Kue, Minuman)
-   - Tap produk untuk melihat detail
-
-4. **Tambah ke Keranjang**
-   - Pilih jumlah produk
-   - Klik "Tambah ke Keranjang"
-   - Keranjang akan terupdate
-
-5. **Checkout**
-   - Tap ikon keranjang → "Proceed to Checkout"
-   - Pilih atau tambah alamat pengiriman
-   - Pilih metode pembayaran
-   - Klik "Confirm Order"
-
-6. **Track Order**
-   - Buka tab "Orders"
-   - Lihat status pesanan (Pending → Processing → Shipped → Delivered)
-
-### Untuk Admin
-
-1. **Login sebagai Admin**
-   - Email: `admin@wibbakery.com`
-   - Password: `admin123`
-
-2. **Dashboard**
-   - Lihat statistik penjualan dan total order
-   - Monitor revenue dan active orders
-
-3. **Kelola Produk**
-   - Tab "Products" → Klik "Add Product"
-   - Isi nama, kategori, harga, deskripsi, stok
-   - Klik "Save"
-
-4. **Kelola Promo**
-   - Tab "Promo" → Klik "Add Promo"
-   - Isi kode promo, diskon, dan tanggal berlaku
-   - Klik "Save"
-
-5. **Kelola Pesanan**
-   - Tab "Orders" → Lihat semua pesanan
-   - Update status pesanan sesuai progress
-
----
-
-## 🔐 Demo Account
-
-Gunakan akun berikut untuk testing:
-
-### Admin Account
+### 👨‍💼 **Login sebagai Admin**
 ```
 Email:    admin@wibbakery.com
 Password: admin123
 ```
 
-### Customer Account
+### 👤 **Login sebagai Customer**
 ```
 Email:    fanduy@gmail.com
 Password: customer123
@@ -255,187 +41,208 @@ Password: customer123
 
 ---
 
-## 📚 Dokumentasi Fitur
+## ✨ Fitur yang Bisa Dicek
 
-### 1. Authentication (Login/Register)
-**File:** `lib/features/auth/`
+### 🛍️ **Customer Features (Login pakai customer account)**
 
-- Validasi email format
-- Password hashing dengan bcryptjs
-- Session management dengan Provider
-- Local storage untuk remember me
+1. **Browse Produk**
+   - Home tab → Scroll lihat roti/kue
+   - Tap produk untuk detail
 
-### 2. Product Management
-**File:** `lib/features/products/` & `lib/features/admin/`
+2. **Belanja**
+   - Pilih jumlah → "Tambah ke Keranjang"
+   - Tap ikon keranjang → lihat item
 
-- CRUD operasi untuk produk
-- Filter berdasarkan kategori
-- Search functionality
-- Stock management
+3. **Checkout**
+   - "Proceed to Checkout"
+   - Isi alamat → "Confirm Order"
 
-### 3. Cart & Checkout
-**File:** `lib/features/cart/` & `lib/features/orders/`
+4. **Lihat Pesanan**
+   - Tab "Orders" → Status pesanan
 
-- Add/remove items dari keranjang
-- Calculate total harga + tax
-- Promo code validation
-- Address selection
+### 🛠️ **Admin Features (Login pakai admin account)**
 
-### 4. Order Tracking
-**File:** `lib/features/orders/`
+1. **Dashboard**
+   - Lihat total penjualan & order
 
-- Real-time status updates
-- Order history
-- Order detail dengan invoice
-- Delivery address tracking
+2. **Tambah Produk**
+   - Tab "Products" → "Add Product"
+   - Isi nama, harga, deskripsi → Save
 
-### 5. Admin Dashboard
-**File:** `lib/features/admin/`
+3. **Manage Orders**
+   - Tab "Orders" → Update status pesanan
 
-- Sales analytics
-- Product inventory
-- Order management
-- Promo campaign management
+4. **Manage Promo**
+   - Tab "Promo" → "Add Promo"
+   - Isi kode & diskon → Save
 
 ---
 
-## 🗄️ Database Schema
+## 🔧 Troubleshooting
 
-### Users Table
-```sql
-CREATE TABLE users (
-  id INTEGER PRIMARY KEY,
-  email TEXT UNIQUE,
-  password TEXT,
-  name TEXT,
-  role TEXT (admin/customer),
-  created_at TIMESTAMP
-);
+### ❌ Error: "flutter: command not found"
+```bash
+# Tambah flutter ke PATH
+export PATH="$PATH:~/flutter/bin"
 ```
 
-### Products Table
-```sql
-CREATE TABLE products (
-  id INTEGER PRIMARY KEY,
-  name TEXT,
-  category_id INTEGER,
-  price REAL,
-  description TEXT,
-  image_url TEXT,
-  stock INTEGER,
-  created_at TIMESTAMP
-);
-```
+### ❌ Error: "Android SDK not found"
+- Buka Android Studio → SDK Manager → Install Android SDK
 
-### Orders Table
-```sql
-CREATE TABLE orders (
-  id INTEGER PRIMARY KEY,
-  user_id INTEGER,
-  total_price REAL,
-  status TEXT (pending/processing/shipped/delivered),
-  delivery_address TEXT,
-  created_at TIMESTAMP
-);
-```
+### ❌ Emulator lambat?
+- Pakai device Android fisik (lebih cepat)
 
-### Cart Items Table
-```sql
-CREATE TABLE cart_items (
-  id INTEGER PRIMARY KEY,
-  user_id INTEGER,
-  product_id INTEGER,
-  quantity INTEGER
-);
+### ❌ Build error?
+```bash
+flutter clean
+flutter pub get
+flutter run
 ```
 
 ---
 
-## 🎓 Pembelajaran & Konsep
+## 📋 Step-by-Step Testing
 
-Proyek ini mengimplementasikan konsep-konsep penting:
+### ✅ Test 1: Login Customer
+1. Klik "Login"
+2. Email: `fanduy@gmail.com`
+3. Password: `customer123`
+4. Klik "Login" → Masuk ke Home ✓
 
-- **State Management** dengan Provider pattern
-- **Local Database** dengan SQLite
-- **Responsive UI** untuk berbagai ukuran layar
-- **Data Modeling** dan entity relationships
-- **Clean Code Architecture** dengan separation of concerns
-- **Authentication & Authorization**
-- **Business Logic** untuk e-commerce
+### ✅ Test 2: Browse & Add Cart
+1. (Sudah login)
+2. Home → Scroll lihat produk
+3. Tap "Roti Sisir"
+4. Quantity = 2
+5. Klik "Tambah ke Keranjang" ✓
+6. Tap ikon keranjang → Lihat 2 item ✓
 
----
+### ✅ Test 3: Checkout
+1. Tap ikon keranjang
+2. Klik "Proceed to Checkout"
+3. Isi alamat pengiriman
+4. Klik "Confirm Order" ✓
+5. Tab "Orders" → Lihat pesanan ✓
 
-## 📸 Screenshots
+### ✅ Test 4: Admin Login
+1. Logout (swipe menu kiri)
+2. Klik "Login"
+3. Email: `admin@wibbakery.com`
+4. Password: `admin123`
+5. Masuk Admin Dashboard ✓
 
-### Customer Flow
-- Splash Screen & Authentication
-- Home/Browse Produk
-- Product Detail
-- Shopping Cart
-- Checkout & Order Confirmation
-- Order Tracking
+### ✅ Test 5: Admin Add Product
+1. (Login sebagai admin)
+2. Tab "Products"
+3. Klik "+" atau "Add Product"
+4. Isi:
+   - Name: "Donat Coklat"
+   - Category: "Kue"
+   - Price: "15000"
+   - Description: "Donat enak"
+   - Stock: "20"
+5. Klik "Save" ✓
+6. Produk baru muncul di list ✓
 
-### Admin Flow
-- Admin Dashboard dengan statistik
-- Product Management
-- Order Management
-- Promo Management
-
----
-
-## 🐛 Known Issues & Limitations
-
-- Database lokal (tidak ada sync ke server)
-- Pembayaran simulasi (tidak real payment gateway)
-- Notifikasi basic (tidak push notification)
-- Offline mode limited
-
----
-
-## 🚧 Future Enhancements
-
-- [ ] Integration dengan payment gateway (Midtrans, Stripe)
-- [ ] Push notifications
-- [ ] Real-time order updates dengan WebSocket
-- [ ] Cloud database (Firebase)
-- [ ] Backend API integration
-- [ ] Rating & review system
-- [ ] Wishlist feature
-- [ ] Multiple payment methods
-- [ ] Admin analytics dashboard yang lebih detailed
+### ✅ Test 6: Admin Add Promo
+1. Tab "Promo"
+2. Klik "Add Promo"
+3. Isi:
+   - Code: "DISKON10"
+   - Discount: "10"
+4. Klik "Save" ✓
 
 ---
 
-## 👥 Tim Pengembang
+## 📁 Project Structure
 
-**Proyek Akhir Pemrograman Mobile**
-- **Kelompok:** 1
-- **Tema:** Aplikasi Mobile Cross-Platform Bakery
-
----
-
-## 📝 Lisensi
-
-Proyek ini dilisensikan di bawah MIT License.
-
----
-
-## 📧 Kontak & Support
-
-Untuk pertanyaan atau saran tentang proyek ini, buka GitHub Issues.
-
----
-
-## 📖 Referensi & Resources
-
-- [Flutter Documentation](https://docs.flutter.dev/)
-- [Dart Documentation](https://dart.dev/guides)
-- [Provider Pattern](https://pub.dev/packages/provider)
-- [SQLite Flutter](https://pub.dev/packages/sqflite)
-- [Material Design 3](https://m3.material.io/)
+```
+lib/
+├── main.dart              ← Main app
+├── features/
+│   ├── auth/              ← Login/Register
+│   ├── products/          ← Browse produk
+│   ├── cart/              ← Keranjang belanja
+│   ├── orders/            ← Lihat pesanan
+│   ├── admin/             ← Admin dashboard
+│   └── promo/             ← Promo system
+├── core/
+│   ├── models/            ← Data structures
+│   ├── database/          ← SQLite
+│   └── theme/             ← Colors & UI
+└── assets/                ← Images
+```
 
 ---
 
-**Happy Coding! 🚀**
+## 🛠️ Tech Stack
+
+- **Frontend:** Flutter 3.0+, Dart 3.0+
+- **State Management:** Provider
+- **Database:** SQLite (local)
+- **Design:** Material Design 3
+
+---
+
+## 📊 File Penting
+
+| File | Fungsi |
+|------|--------|
+| `lib/main.dart` | Entry point |
+| `lib/features/auth/` | Login/Register |
+| `lib/features/products/` | Katalog produk |
+| `lib/features/admin/` | Admin dashboard |
+| `lib/core/database/` | Database SQLite |
+| `pubspec.yaml` | Dependencies |
+
+---
+
+## 🗄️ Database (Local SQLite)
+
+Data disimpan **lokal** di device. Database auto-created saat app pertama dibuka.
+
+**Tables:**
+- `users` - Login data
+- `products` - Katalog
+- `orders` - Pesanan
+- `cart_items` - Keranjang
+- `promos` - Kode promo
+
+---
+
+## 📝 Catatan
+
+- **Database:** Lokal, tidak ada server
+- **Pembayaran:** Simulasi
+- **Notifikasi:** Basic
+- **Auth:** Email + Password
+
+---
+
+## ✅ Checklist untuk Dosen
+
+- [x] Login/Register (2 role)
+- [x] Product Catalog
+- [x] Shopping Cart
+- [x] Order Management
+- [x] Admin Dashboard
+- [x] Promo System
+- [x] SQLite Database
+- [x] Responsive UI
+- [x] State Management
+- [x] Clean Code
+
+---
+
+## 🎯 Yang Perlu Diperhatikan Saat Presentasi
+
+1. **Show Login** → Demo 2 role (Admin vs Customer)
+2. **Customer Flow** → Browse → Cart → Checkout → Order
+3. **Admin Flow** → Dashboard → Add Product → Manage Orders
+4. **Highlight** → Promo, Order Tracking, real-time status
+
+---
+
+**Ready to test? Follow QUICK START di atas! 🔥**
 
 *Last Updated: October 2026*
